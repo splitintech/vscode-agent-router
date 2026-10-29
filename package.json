@@ -254,7 +254,7 @@
     "zod": "^3.24.0"
   },
   "devDependencies": {
-    "@types/node": "^22.15.0",
+    "@types/node": "^26.6.5",
     "@types/vscode": "^1.93.0",
     "@vscode/vsce": "3.6.0",
     "tsup": "^8.5.0",
