@@ -12,4 +12,5 @@ export default defineConfig({
   clean: true,
   target: "node20",
   external: ["vscode"],
+  noExternal: [/^@modelcontextprotocol\//, /^zod/],
 });

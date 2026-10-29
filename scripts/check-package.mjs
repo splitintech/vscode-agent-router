@@ -1,0 +1,30 @@
+import {mkdtempSync,readFileSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {execFileSync} from 'node:child_process';
+import {pathToFileURL} from 'node:url';
+import assert from 'node:assert/strict';
+import {Client} from '@modelcontextprotocol/sdk/client/index.js';
+import {StdioClientTransport} from '@modelcontextprotocol/sdk/client/stdio.js';
+const pkg=JSON.parse(readFileSync('package.json','utf8'));
+const temp=mkdtempSync(join(tmpdir(),'agent-router-vsix-'));
+let client;
+try {
+ execFileSync('unzip',['-q',`${pkg.name}-${pkg.version}.vsix`,'-d',temp]);
+ const extension=join(temp,'extension');
+ const manifest=JSON.parse(readFileSync(join(extension,'package.json'),'utf8'));
+ assert.equal(`${manifest.publisher}.${manifest.name}`,'splitin.agent-router');
+ const code=`const assert=require('node:assert/strict');const Module=require('node:module');const load=Module._load;Module._load=function(id,...args){if(id==='vscode')return {TreeItem:class{}};return load.call(this,id,...args)};assert.equal(typeof require(${JSON.stringify(join(extension,'dist/extension.cjs'))}).activate,'function');`;
+ execFileSync(process.execPath,['-e',code],{cwd:temp,stdio:'pipe'});
+ const api=await import(pathToFileURL(join(extension,'dist/index.js')).href);
+ const catalog=api.loadCatalog(join(extension,'catalog/peers.json'));
+ assert.ok(new api.PeerRegistry(catalog).list().length>0);
+ client=new Client({name:'standalone-package-check',version:'1.0.0'});
+ await client.connect(new StdioClientTransport({command:process.execPath,args:[join(extension,'dist/mcp.js')],cwd:temp,env:{PATH:process.env.PATH??'',AGENT_ROUTER_CATALOG:join(extension,'catalog/peers.json'),AGENT_ROUTER_CWD:temp,AGENT_ROUTER_DRY_RUN:'1',AGENT_ROUTER_PROMPTS_DIR:'builtin:ideation-loop-system'}}));
+ const listed=await client.listTools();assert.ok(listed.tools.some(t=>t.name==='route'));
+ const routed=await client.callTool({name:'route',arguments:{peer:'claude',action:'consult',runtime:'ide',prompt:'fixture',params:{promptId:'chatgpt.plan'}}});
+ const result=JSON.parse(routed.content.find(c=>c.type==='text').text);
+ assert.equal(result.ok,true,JSON.stringify(result));
+ assert.match(decodeURIComponent(result.url),/chatgpt\.plan/);
+ console.log('VSIX verified: identity, extension load, isolated ESM library, MCP handshake and bundled-prompt dry-run.');
+} finally {if(client)await client.close();rmSync(temp,{recursive:true,force:true});}

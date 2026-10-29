@@ -1,0 +1,413 @@
+{
+  "source_repository": "https://github.com/splitintech/open-internal-tools",
+  "source_commit": "f5ec32bc4d050bfbd3f01ecc53569038eb9ce308",
+  "product": "vscode-agent-router",
+  "files": [
+    {
+      "source": ".github/workflows/vscode-agent-router-publish.yml",
+      "target": ".github/workflows/vscode-agent-router-publish.yml",
+      "git_blob": "29d31ab25c003aac1dea583dde5115b36027f854",
+      "mode": "100644",
+      "sha256": "ebb679af2f50b4ff99e38240f0dcc535157d14cc5a2cd7783ce37109eba70bfa"
+    },
+    {
+      "source": "docs/brand/splitin-logo.png",
+      "target": "docs/brand/splitin-logo.png",
+      "git_blob": "807558c4206517d878dfe932315bf738317141fe",
+      "mode": "100644",
+      "sha256": "9e0954d3aa5ccfd94a358e61f9d0f18b2b80928c162d6a3228d9389769496a72"
+    },
+    {
+      "source": "vscode-agent-router/.gitignore",
+      "target": ".gitignore",
+      "git_blob": "7352039565abb3cd61295ed6b2d04beeb4b6f835",
+      "mode": "100644",
+      "sha256": "3d785e632314596921030e4718d83dbf9f07c26b25ff982d6ad0285e7bc2449f"
+    },
+    {
+      "source": "vscode-agent-router/.vscode/launch.json",
+      "target": ".vscode/launch.json",
+      "git_blob": "e6b839397040c7f2866c6045e20fc0580d561c5d",
+      "mode": "100644",
+      "sha256": "0f2bf48129430d8ca8b35cbbd1926d385b5ef73a3b8fd29a280000890ce357a2"
+    },
+    {
+      "source": "vscode-agent-router/.vscode/tasks.json",
+      "target": ".vscode/tasks.json",
+      "git_blob": "28aa9b0944d72d2cc1477796eac6e67af7f28292",
+      "mode": "100644",
+      "sha256": "999f947d9d506e58071d2c0a17a527f8709dc50cfd2f535176adb894997532da"
+    },
+    {
+      "source": "vscode-agent-router/.vscodeignore",
+      "target": ".vscodeignore",
+      "git_blob": "10e4821b29467422a27e8109c27e9e468efb5b85",
+      "mode": "100644",
+      "sha256": "d6f93094f5d8d97785077c19e9dff84a60aee97aaf4d0e715c6fd23a87a1f6b4"
+    },
+    {
+      "source": "vscode-agent-router/CHANGELOG.md",
+      "target": "CHANGELOG.md",
+      "git_blob": "d1569a1de11a14675d9e2824d2f0c483cac2fb9a",
+      "mode": "100644",
+      "sha256": "9355f9c4ffc490fd715810774978f45392ec36f0d636bde05cc1ebb8ed4e904b"
+    },
+    {
+      "source": "vscode-agent-router/LICENSE",
+      "target": "LICENSE",
+      "git_blob": "f158bb766c93da3dd1c3ca8d3a0cec24f5447e1c",
+      "mode": "100644",
+      "sha256": "02f58ea424eb4df2bc2a256b130e16ce76d86ae4f91e7377abdcea4927f136ef"
+    },
+    {
+      "source": "vscode-agent-router/README.md",
+      "target": "README.md",
+      "git_blob": "f413519881c26a532c5e52228c0b5530b1c5711d",
+      "mode": "100644",
+      "sha256": "a78944e28b96bcc58d3589b9841623679501ebb251200131caf857a6dba6a4e2"
+    },
+    {
+      "source": "vscode-agent-router/catalog/peers.json",
+      "target": "catalog/peers.json",
+      "git_blob": "8131a5df905b67aaa9ac8785ba8c5fca46b7d2b8",
+      "mode": "100644",
+      "sha256": "1ad243b5bf3c1306a67965cf955052b0d1e7cfbf8cf12ce5a0b882f3bf97ccb2"
+    },
+    {
+      "source": "vscode-agent-router/docs/banner.webp",
+      "target": "docs/banner.webp",
+      "git_blob": "da5f5ef4d66928125479f9a8733f590f32b3144f",
+      "mode": "100644",
+      "sha256": "c50ec82d5a2ad49c0b52316074346a87e3dff8c44a41a245b0f3905e93d85e9a"
+    },
+    {
+      "source": "vscode-agent-router/mcp.example.json",
+      "target": "mcp.example.json",
+      "git_blob": "3e3ae447aef660f17a610cb4132027f4ac3a1d13",
+      "mode": "100644",
+      "sha256": "4d9091a397f9db1a4837dbdeb7752348914ac8a87bdf316c01c61a4ffed7ab8d"
+    },
+    {
+      "source": "vscode-agent-router/media/icon.png",
+      "target": "media/icon.png",
+      "git_blob": "8387dddf291ce8aa235a93e0f159463357e325c3",
+      "mode": "100644",
+      "sha256": "19dfe815e13227f4299e0b700acaf4b4a64839df99aec3f0e455b29b7f7ead1f"
+    },
+    {
+      "source": "vscode-agent-router/media/icon.svg",
+      "target": "media/icon.svg",
+      "git_blob": "88bbbc1200ac9d63cb748ab2765cb04cd382f306",
+      "mode": "100644",
+      "sha256": "246e9d1397b733d74d382549cdd4ff9ce5bdcb6de55001d83562d1f239f00482"
+    },
+    {
+      "source": "vscode-agent-router/package-lock.json",
+      "target": "package-lock.json",
+      "git_blob": "4b610688dd650160f6eeaf10b27fd8683afb291b",
+      "mode": "100644",
+      "sha256": "943b40dee9198544b87ea4925bcc6909e9f510a720a6944e4bddf224f395d540"
+    },
+    {
+      "source": "vscode-agent-router/package.json",
+      "target": "package.json",
+      "git_blob": "267219f9ebbbe19a41377a5323288beef6375e6a",
+      "mode": "100644",
+      "sha256": "14ea3db4c209b090c3c464f624331c2f65f6eac37f34a1ac6c6d430288aa78e8"
+    },
+    {
+      "source": "vscode-agent-router/scripts/publish-marketplaces.mjs",
+      "target": "scripts/publish-marketplaces.mjs",
+      "git_blob": "fe80938cc50bd8db13461d92b4ac9816a77f25f1",
+      "mode": "100644",
+      "sha256": "8f1a08739a7bc4225417bdb31c7049929aa0048cd1e1f09b8179f64685f35352"
+    },
+    {
+      "source": "vscode-agent-router/src/adapters/chatgpt.ts",
+      "target": "src/adapters/chatgpt.ts",
+      "git_blob": "c9667fef8f0bf7aa0947004d097f23bd6cf7dd51",
+      "mode": "100644",
+      "sha256": "6cd4460c9ca535354cc04632564c87531c2e99ef37eb78ed36007a20a2193111"
+    },
+    {
+      "source": "vscode-agent-router/src/adapters/claude.ts",
+      "target": "src/adapters/claude.ts",
+      "git_blob": "7cf5fc1edda14bca7f6a839a7cf56d81aeea7f09",
+      "mode": "100644",
+      "sha256": "6e141e092e7ab610493fbe71629e587560bc4020b0d4004ed4369d32842ecb7d"
+    },
+    {
+      "source": "vscode-agent-router/src/adapters/codex.ts",
+      "target": "src/adapters/codex.ts",
+      "git_blob": "da9f6912a34bea88cf9aff52113299ac7c8458b0",
+      "mode": "100644",
+      "sha256": "1240603e36236ca4ade7a14eb96d0fca9a27375773ded98447319c7f1d87e0f3"
+    },
+    {
+      "source": "vscode-agent-router/src/adapters/cursor.ts",
+      "target": "src/adapters/cursor.ts",
+      "git_blob": "9d3b3c9f5c119a215649f080fdd7c7b6d69732c4",
+      "mode": "100644",
+      "sha256": "ae856eb5849702e3150c639086b35b2d570e8b304b8bdc35c9e3fc99ba90ee5d"
+    },
+    {
+      "source": "vscode-agent-router/src/adapters/generic.ts",
+      "target": "src/adapters/generic.ts",
+      "git_blob": "5f4adee864cbf9cb811f6e610b906465d309e53b",
+      "mode": "100644",
+      "sha256": "5fe64570dbd0deb9e762dec09977fa0d1da67d3ddd84a7d9f16a441cd9b524f4"
+    },
+    {
+      "source": "vscode-agent-router/src/adapters/ideLaunch.ts",
+      "target": "src/adapters/ideLaunch.ts",
+      "git_blob": "905be060b3f0feabd98396f28ea67bd07cce39a4",
+      "mode": "100644",
+      "sha256": "2d9cf8a460b6684dffcdf3156240de9d5d0907876d11252c71d0adbd59784833"
+    },
+    {
+      "source": "vscode-agent-router/src/adapters/index.ts",
+      "target": "src/adapters/index.ts",
+      "git_blob": "13edc54c1e79ce189a60628eb7a056b391f0c32f",
+      "mode": "100644",
+      "sha256": "eb6b9210992f2d2bac4d8f2c766c90ea28a924c7843613e9a81a4caab28f7676"
+    },
+    {
+      "source": "vscode-agent-router/src/adapters/slack.ts",
+      "target": "src/adapters/slack.ts",
+      "git_blob": "fb7fc577a5d02e2e85e789f5c36eb6f82cfb4f40",
+      "mode": "100644",
+      "sha256": "5f5bde2e0ef7d20f4e28ba43242183655aedaa9a05a7fd3c589fd57615cc09d8"
+    },
+    {
+      "source": "vscode-agent-router/src/core/hqJobs.ts",
+      "target": "src/core/hqJobs.ts",
+      "git_blob": "7ee94cc0a48b1c6e91e59dbd31e0950774a96c48",
+      "mode": "100644",
+      "sha256": "90dce596cb73b2dad46733e0a6c265951995fdc3c5d34977596a30c5c159bbd6"
+    },
+    {
+      "source": "vscode-agent-router/src/core/jobs.ts",
+      "target": "src/core/jobs.ts",
+      "git_blob": "36b85fe57db3a5defee25e0774e0801cef449e63",
+      "mode": "100644",
+      "sha256": "f3d4ab0d974b016f78f079b83c0c3b5282ad7e89c9cfd2e736ba2a28548c0b32"
+    },
+    {
+      "source": "vscode-agent-router/src/core/launchUri.ts",
+      "target": "src/core/launchUri.ts",
+      "git_blob": "d1bfdd7eab39ab09e66fefefbc9d8f6e5dd65d87",
+      "mode": "100644",
+      "sha256": "d2438466c0f26fc562aa3d1fe22f6518f82168fb7113b73fcdea074206bb3d55"
+    },
+    {
+      "source": "vscode-agent-router/src/core/openUri.ts",
+      "target": "src/core/openUri.ts",
+      "git_blob": "0f9c463e863b09efc7a014e27be6c6f06457c559",
+      "mode": "100644",
+      "sha256": "9f3bff199d22a99df499edbb4a3e9ea6ff6f00a58de8ecbe049d5fb427ff1eac"
+    },
+    {
+      "source": "vscode-agent-router/src/core/poll.ts",
+      "target": "src/core/poll.ts",
+      "git_blob": "3fea24c3132b293367546bd46efb734c12c273cf",
+      "mode": "100644",
+      "sha256": "fc2c6c00fd154b89a75b0d7a7b379e3f76c387c4bbb1a35c9135398414fe1d12"
+    },
+    {
+      "source": "vscode-agent-router/src/core/probe.ts",
+      "target": "src/core/probe.ts",
+      "git_blob": "878f681d0dcd2113bc945f676bb15d17c99fd79f",
+      "mode": "100644",
+      "sha256": "eec72879f9d8560784f0373553614bf7bff5a8af7e4dd27533789458e962af60"
+    },
+    {
+      "source": "vscode-agent-router/src/core/prompts.ts",
+      "target": "src/core/prompts.ts",
+      "git_blob": "3b2bded2c964130484099f86f073e9b29327b29d",
+      "mode": "100644",
+      "sha256": "58c4a7f7feab4019d068b2d0ed47d659bff3ed9d2ff7d14308aedf73754bdd7b"
+    },
+    {
+      "source": "vscode-agent-router/src/core/registry.ts",
+      "target": "src/core/registry.ts",
+      "git_blob": "1d4dae8b8d89456dc42043b46c55a761297fbd91",
+      "mode": "100644",
+      "sha256": "bc8e5971b3ebc27e84c5c3765b922b05e9b119a95cab8ac0824375f37245f671"
+    },
+    {
+      "source": "vscode-agent-router/src/core/router.ts",
+      "target": "src/core/router.ts",
+      "git_blob": "77dbabd1eb9e6084be7f6fe2b69d28e8b1546a36",
+      "mode": "100644",
+      "sha256": "e7d849c3746597376cb02ae969e7e32998378a9555b2a1c81c57327a3e9a0bea"
+    },
+    {
+      "source": "vscode-agent-router/src/core/types.ts",
+      "target": "src/core/types.ts",
+      "git_blob": "4a414ac160fa5369754343e4fdb2b467cedfe000",
+      "mode": "100644",
+      "sha256": "371b39c999781d32fc65fbe9b015889effdab832fe85a0252841e7a9706ceab2"
+    },
+    {
+      "source": "vscode-agent-router/src/ext/handoff.ts",
+      "target": "src/ext/handoff.ts",
+      "git_blob": "e9e31456592d5ef58c31235dd7d2049ee47ac054",
+      "mode": "100644",
+      "sha256": "62979218e137ce266e767b104f8482e80ffc99c337d38a0b948f12ccae746fc6"
+    },
+    {
+      "source": "vscode-agent-router/src/ext/jobsTree.ts",
+      "target": "src/ext/jobsTree.ts",
+      "git_blob": "de0dbee2f4a32cf0c9dcc21a6ca13ceddf5efda2",
+      "mode": "100644",
+      "sha256": "fdd03320b78490dc6892efffc2e5e65ccfb985878e776db17a75389cd1e34640"
+    },
+    {
+      "source": "vscode-agent-router/src/ext/mcpHost.ts",
+      "target": "src/ext/mcpHost.ts",
+      "git_blob": "ce504f50516aebf72207acf10a9443ab8deeb8ed",
+      "mode": "100644",
+      "sha256": "7a33f4d98ddcfb2bc6871ab37c9f156838267a83e96090544be7238f122743eb"
+    },
+    {
+      "source": "vscode-agent-router/src/ext/peersTree.ts",
+      "target": "src/ext/peersTree.ts",
+      "git_blob": "c1ec5c2daddc02eca1d0f92f21d8ced03a787ca1",
+      "mode": "100644",
+      "sha256": "e3601a3418dbb4487cf6fc15965b85bced336608dc40b5aeb516c27ecbf2be0c"
+    },
+    {
+      "source": "vscode-agent-router/src/ext/poller.ts",
+      "target": "src/ext/poller.ts",
+      "git_blob": "72370bd09639502bfb4d4ab8c2fc15d38fb31db9",
+      "mode": "100644",
+      "sha256": "bb9ca369bb73f494da5594a0913948e2755c0fae9c50d9dd0022e03df022fd27"
+    },
+    {
+      "source": "vscode-agent-router/src/ext/routerFactory.ts",
+      "target": "src/ext/routerFactory.ts",
+      "git_blob": "3e631b93cd0ca0cc68314f30a29aaa286cf32f66",
+      "mode": "100644",
+      "sha256": "15c9b0a933c548124b7467171e45c38d04f9394f12e409e80a6e15690e3240de"
+    },
+    {
+      "source": "vscode-agent-router/src/extension.ts",
+      "target": "src/extension.ts",
+      "git_blob": "05e15592e2fa9a0a52e81e2ca0c572e128df0e2a",
+      "mode": "100644",
+      "sha256": "0ccd720635c7eb2420685a49e2527f90929a0fbd2b16fa6dada60023ed8e9404"
+    },
+    {
+      "source": "vscode-agent-router/src/index.ts",
+      "target": "src/index.ts",
+      "git_blob": "3f15041f200f40abd40ffb3f856f828d317e2604",
+      "mode": "100644",
+      "sha256": "dfc7de8af33697f075901e55bfb8afea200dee7f15dc2d8e1da078b76b2868a3"
+    },
+    {
+      "source": "vscode-agent-router/src/json.d.ts",
+      "target": "src/json.d.ts",
+      "git_blob": "0b1ca5e07f352873356f6d5b4a01d8060f64d5e5",
+      "mode": "100644",
+      "sha256": "b79b188810d876ac46cb3c40327f89e6d4752781c8e2d3aacd92fad8c63623eb"
+    },
+    {
+      "source": "vscode-agent-router/src/mcp/createServer.ts",
+      "target": "src/mcp/createServer.ts",
+      "git_blob": "d1467eebe51959f019c5653b090c0cb621bd4d83",
+      "mode": "100644",
+      "sha256": "bd5687678e79666914c4a95e536d80ee861ba8fce89da874f9d9d111d406c85c"
+    },
+    {
+      "source": "vscode-agent-router/src/mcp/server.ts",
+      "target": "src/mcp/server.ts",
+      "git_blob": "3e4288fe21783f6df0352c036fc532bd98c30861",
+      "mode": "100644",
+      "sha256": "fd789bb3b51be005d86d28ff11d1e4320a512782938e9aa1314f241861914572"
+    },
+    {
+      "source": "vscode-agent-router/src/transports/cli.ts",
+      "target": "src/transports/cli.ts",
+      "git_blob": "3ad9a6984e19c93df2dfa9f53c54245343e375f7",
+      "mode": "100644",
+      "sha256": "74cc07bb195ac5b3870b52354be28f39f7b3aedd2fe44b234d5ef008ae2ddd33"
+    },
+    {
+      "source": "vscode-agent-router/src/transports/http.ts",
+      "target": "src/transports/http.ts",
+      "git_blob": "215a33f1ce5f0ad7c2acdd439e0523bdea71f8ed",
+      "mode": "100644",
+      "sha256": "a0a8896a09da3c6cfcfe7fd1fbcff832fda107bd0e09ca61077cf96b7e4d6f7c"
+    },
+    {
+      "source": "vscode-agent-router/tests/hqJobs.test.ts",
+      "target": "tests/hqJobs.test.ts",
+      "git_blob": "7fb8426b598c3d414e16f9c2462d981404f4123f",
+      "mode": "100644",
+      "sha256": "54587534fc925905d3147d1c89327e560a435f62b2e1838e132a4d58a28442d7"
+    },
+    {
+      "source": "vscode-agent-router/tests/jobs.test.ts",
+      "target": "tests/jobs.test.ts",
+      "git_blob": "06aab29044a8c7e449df02aa5366620b1b6651e8",
+      "mode": "100644",
+      "sha256": "acabfa8a833471fe49041e932b84f0ce3a1d67706bd594872ff9a00b039fe436"
+    },
+    {
+      "source": "vscode-agent-router/tests/launchUri.test.ts",
+      "target": "tests/launchUri.test.ts",
+      "git_blob": "d87de16ffb5a5af639261a495e812d8a95acf322",
+      "mode": "100644",
+      "sha256": "4db58c55fbb9e0e61ea4ab10912b6fa3efad9f2d4296cbb884bc6e9f62b60998"
+    },
+    {
+      "source": "vscode-agent-router/tests/prompts.test.ts",
+      "target": "tests/prompts.test.ts",
+      "git_blob": "2a762543bc5e7849372343489550dfe207865666",
+      "mode": "100644",
+      "sha256": "ebc0be6a25a106d416402c8a2d4d333d0000120b6dc4c884feb04dff513ec436"
+    },
+    {
+      "source": "vscode-agent-router/tests/registry.test.ts",
+      "target": "tests/registry.test.ts",
+      "git_blob": "bb255b0f43fb108708142757bd33135cb67141b1",
+      "mode": "100644",
+      "sha256": "b200fd8022133adaa3e74b358dea56004e72356e3fb0b51da70d6961f6fb7388"
+    },
+    {
+      "source": "vscode-agent-router/tests/router.test.ts",
+      "target": "tests/router.test.ts",
+      "git_blob": "5bef573a4d49d293c0b081af8bf99a081b26d12d",
+      "mode": "100644",
+      "sha256": "5745e0d5dbaf85dbdc2b16958063e20e5b29db0292faff5fcf1db765d5bb3df2"
+    },
+    {
+      "source": "vscode-agent-router/tests/slack.test.ts",
+      "target": "tests/slack.test.ts",
+      "git_blob": "8cbbc05d43d6d0fbe1bf267fa9bad30f9188eef4",
+      "mode": "100644",
+      "sha256": "6ff086ba2657e7f82f99ba549cd6452900e1706119a993151f7fc14475d3a4d6"
+    },
+    {
+      "source": "vscode-agent-router/tsconfig.json",
+      "target": "tsconfig.json",
+      "git_blob": "291219b69310bf0689c23e1dc2d3c90a0f37b2cf",
+      "mode": "100644",
+      "sha256": "dc9784e1a2c5994088567aabeddf8532617b30e722a130d26d92cb547a4dbe72"
+    },
+    {
+      "source": "vscode-agent-router/tsup.config.ts",
+      "target": "tsup.config.ts",
+      "git_blob": "5aec866a0b18f0b2bacfcdcc3f3d6131f2801994",
+      "mode": "100644",
+      "sha256": "ec4b90f19f0f7644e38f369a459dfa3afcdd6e3b975d0497ef74d5f32a7b2cd8"
+    },
+    {
+      "source": "vscode-agent-router/vitest.config.ts",
+      "target": "vitest.config.ts",
+      "git_blob": "b91163fb5bba7035bfc3601f38183906d3513421",
+      "mode": "100644",
+      "sha256": "3c733ed3ed1b92c001fe318b80e13497ab3ec30ec95516945dacf879e8d7f6fc"
+    }
+  ]
+}

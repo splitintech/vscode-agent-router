@@ -2,7 +2,7 @@
   "name": "agent-router",
   "displayName": "SplitIn Agent Router",
   "version": "0.1.0",
-  "description": "Route Cursor agents to Claude Code, Codex, ChatGPT, Slack, and catalog peers — extensions first, CLI/API for platform tools.",
+  "description": "Route Cursor agents to Claude Code, Codex, ChatGPT, Slack, and catalog peers \u2014 extensions first, CLI/API for platform tools.",
   "publisher": "splitin",
   "license": "MIT",
   "author": "SplitInTech, @ojchavan",
@@ -11,17 +11,27 @@
     "color": "#1b1f24",
     "theme": "dark"
   },
-  "homepage": "https://github.com/splitintech/open-internal-tools/tree/main/vscode-agent-router",
+  "homepage": "https://github.com/splitintech/vscode-agent-router#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/splitintech/open-internal-tools.git",
-    "directory": "vscode-agent-router"
+    "url": "git+https://github.com/splitintech/vscode-agent-router.git"
   },
   "bugs": {
-    "url": "https://github.com/splitintech/open-internal-tools/issues"
+    "url": "https://github.com/splitintech/vscode-agent-router/issues"
   },
-  "categories": ["Other", "Machine Learning", "Chat"],
-  "keywords": ["cursor", "claude", "codex", "slack", "mcp", "agent"],
+  "categories": [
+    "Other",
+    "Machine Learning",
+    "Chat"
+  ],
+  "keywords": [
+    "cursor",
+    "claude",
+    "codex",
+    "slack",
+    "mcp",
+    "agent"
+  ],
   "type": "module",
   "main": "./dist/extension.cjs",
   "module": "./dist/index.js",
@@ -208,7 +218,7 @@
         "agentRouter.promptsDir": {
           "type": "string",
           "default": "",
-          "description": "Prompt catalog directory (defaults to sibling ../ideation-loop-system/prompts or ~/.agent-router/prompts)"
+          "description": "Prompt catalog directory; explicit setting and AGENT_ROUTER_PROMPTS_DIR override the bundled Ideation catalog."
         },
         "agentRouter.hqUrl": {
           "type": "string",
@@ -229,10 +239,15 @@
     "test:watch": "vitest",
     "mcp": "node dist/mcp.js",
     "vscode:prepublish": "npm run build",
-    "package": "npm run build && npx --yes @vscode/vsce package --no-dependencies",
+    "package": "npm run build && vsce package --no-dependencies",
     "publish:vsce": "npm run build && npx --yes @vscode/vsce publish --no-dependencies",
     "publish:ovsx": "npx --yes ovsx publish --no-dependencies",
-    "publish:marketplaces": "node ./scripts/publish-marketplaces.mjs"
+    "publish:marketplaces": "node ./scripts/publish-marketplaces.mjs",
+    "check:migration": "python3 scripts/check-migration.py",
+    "typecheck": "tsc --noEmit",
+    "check:package": "node scripts/check-package.mjs",
+    "sync:prompts": "node scripts/sync-prompts.mjs",
+    "check:prompts": "node scripts/sync-prompts.mjs --check"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.0",
@@ -241,6 +256,7 @@
   "devDependencies": {
     "@types/node": "^22.15.0",
     "@types/vscode": "^1.93.0",
+    "@vscode/vsce": "3.6.0",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"

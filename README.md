@@ -11,12 +11,12 @@
 <p align="center">
   <a href="https://marketplace.visualstudio.com/items?itemName=splitin.agent-router"><img src="https://img.shields.io/visual-studio-marketplace/v/splitin.agent-router?label=VS%20Marketplace" alt="Visual Studio Marketplace"></a>
   <a href="https://open-vsx.org/extension/splitin/agent-router"><img src="https://img.shields.io/open-vsx/v/splitin/agent-router?label=Open%20VSX" alt="Open VSX"></a>
-  <a href="https://github.com/splitintech/open-internal-tools/blob/main/vscode-agent-router/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT license"></a>
-  <a href="https://github.com/splitintech/open-internal-tools/tree/main/vscode-agent-router"><img src="https://img.shields.io/badge/product-open--internal-tools-orange" alt="Open Internal Tools"></a>
+  <a href="https://github.com/splitintech/vscode-agent-router/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT license"></a>
+  <a href="https://github.com/splitintech/vscode-agent-router"><img src="https://img.shields.io/badge/product-open--internal-tools-orange" alt="Open Internal Tools"></a>
 </p>
 
 <p align="center">
-  <a href="../README.md">Hub</a>
+  <a href="https://github.com/splitintech/open-internal-tools">Hub</a>
   ·
   <a href="#getting-started">Docs</a>
   ·
@@ -101,8 +101,8 @@ Shared defaults across those folders, followed here:
 ## Getting started
 
 ```sh
-git clone https://github.com/splitintech/open-internal-tools.git
-cd open-internal-tools/vscode-agent-router
+git clone https://github.com/splitintech/vscode-agent-router.git
+cd vscode-agent-router
 npm install
 npm test
 npm run build
@@ -355,4 +355,15 @@ Own this dispatcher end to end — or explore SplitIn tech careers — at **[htt
 
 ## License
 
-MIT. See [LICENSE](LICENSE). Program rules live with the hub: [CONTRIBUTING.md](../CONTRIBUTING.md).
+MIT. See [LICENSE](LICENSE). Program rules live with the hub: [CONTRIBUTING.md](CONTRIBUTING.md).
+
+
+## Standalone repository
+
+This product is maintained at [vscode-agent-router](https://github.com/splitintech/vscode-agent-router). Clone this repository and run the documented setup from its root. The npm/package and API identities are preserved. See [migration provenance](docs/migration.md) and [contributing](CONTRIBUTING.md). See [release setup](docs/repository-release.md); publishing starts disabled pending external configuration.
+
+## Standalone prompt catalog
+
+The extension and MCP builds include a pinned Ideation prompt catalog, so an adjacent checkout is not required. Explicit `agentRouter.promptsDir` or `AGENT_ROUTER_PROMPTS_DIR` configuration takes precedence; existing sibling and personal catalogs remain supported. The bundled snapshot is a generated consumer of [Ideation Loop System](https://github.com/splitintech/ideation-loop-system), with per-file provenance in [prompt-catalog.json](docs/migration/prompt-catalog.json). Update `prompts/` and run `npm run sync:prompts` to regenerate `src/core/bundledPrompts.ts` when deliberately upgrading the catalog.
+
+Run `npm ci`, `npm run typecheck`, `npm test`, and `npm run package`. The VSIX retains extension ID `splitin.agent-router`. Publishing to either marketplace remains a separate, credentialed release action.

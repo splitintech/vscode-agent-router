@@ -1,0 +1,80 @@
+{
+  "canonical_repository": "https://github.com/splitintech/ideation-loop-system",
+  "source_repository": "https://github.com/splitintech/open-internal-tools",
+  "source_commit": "f5ec32bc4d050bfbd3f01ecc53569038eb9ce308",
+  "source_path": "ideation-loop-system/prompts",
+  "files": [
+    {
+      "path": "catalog.yaml",
+      "sha256": "0c9808cdf0ca1b6deaf6210ceadccd2aa88d227a2c772ebc1cf9f7e0d1c21d14"
+    },
+    {
+      "path": "chatgpt/images.md",
+      "sha256": "08c33a6a94f0c179beb460e724f50bf8b4056d9d097a55db1f353ae8f0b6763a"
+    },
+    {
+      "path": "chatgpt/plan.md",
+      "sha256": "b722d01f6d90106637c3ea43295aac7a0e334d2d29e627da6b48d2f65227bb4f"
+    },
+    {
+      "path": "claude/ui.md",
+      "sha256": "e9c50bdab75030972e2913dd74fc365490269e3672e189dd2ce47193c7e3ceb6"
+    },
+    {
+      "path": "codex/prd.md",
+      "sha256": "cdd134b9491c92f7e461abd7e9b4cfc618ed71d873dae96f6b3838c3ae5ee62e"
+    },
+    {
+      "path": "cursor/orchestrate.md",
+      "sha256": "3f7f2317234dce379d5ae3116ae776e4e24cbe7c1db12b85a6b2d2cad8edf02a"
+    },
+    {
+      "path": "loop/backend-picker.md",
+      "sha256": "f21e1919bb65948ca1e46d4869362cf31a60df2ff910fb5749ae329144ba03ff"
+    },
+    {
+      "path": "loop/language-picker.md",
+      "sha256": "2a80a2f1786ab1d04277dc3fe842af510230a804aff884f94b1652a7ab2eb2ea"
+    },
+    {
+      "path": "loop/oss-tool-picker.md",
+      "sha256": "97c73b2da256b95ce1644a0c85bae8e798687879c4f2d1b72eff2a05eee4016e"
+    },
+    {
+      "path": "loop/pwa-desktop-deno.md",
+      "sha256": "f5c74d39a3b197a061fbd5637099d9b5cd192c614b1056d840c23402c1940854"
+    },
+    {
+      "path": "loop/pwa-maintainer.md",
+      "sha256": "0166b036d302c96bc76b8722985bc8a3c62e555a5b46f5ae17fc44b885b98c4c"
+    },
+    {
+      "path": "loop/seo-route-adder.md",
+      "sha256": "0642b57d6e6443b064cf4b91004dbb20b59d5898ad5d7ddaefe2102df4d98ace"
+    },
+    {
+      "path": "loop/video-live.md",
+      "sha256": "169a653779d7e664260e091e621841bbb9f83f74bd851e923c250c1c540ccee8"
+    },
+    {
+      "path": "recurring/chatgpt-banners.md",
+      "sha256": "f285044978e77bb67a33c32689713eb6a95a59ad7689096e7a40830fde7074af"
+    },
+    {
+      "path": "recurring/desktop-deno-smoke.md",
+      "sha256": "04e5139ce1535c5f270ef8170c41f7a40ecb1030e285cb2fe78cbbfaf1d5439f"
+    },
+    {
+      "path": "recurring/pwa-contract.md",
+      "sha256": "8d9cd8e0213ecb6f20c55f7457fc194511c7f141e65418a47b08a8652732875c"
+    },
+    {
+      "path": "recurring/seo-drift.md",
+      "sha256": "214c67296aa9f12f26d8f87fe17d1dd7f879ef23db8f538759854a31096a3b77"
+    },
+    {
+      "path": "recurring/video-pipeline-health.md",
+      "sha256": "ad2d4c2cfc424f97a313f8217da7f40a12c08709e7da39f21198ad1732854f9d"
+    }
+  ]
+}

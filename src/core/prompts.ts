@@ -2,6 +2,9 @@ import { existsSync, readFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
 import type { RouteRequest } from "./types";
+import { BUNDLED_PROMPTS } from "./bundledPrompts";
+
+export const BUNDLED_PROMPTS_DIR = "builtin:ideation-loop-system";
 
 export function resolvePromptsDir(cwd: string, configured?: string): string {
   if (configured?.trim()) return configured.trim();
@@ -10,7 +13,8 @@ export function resolvePromptsDir(cwd: string, configured?: string): string {
   if (existsSync(join(sibling, "catalog.yaml"))) return sibling;
   const nextToCwd = join(cwd, "ideation-loop-system", "prompts");
   if (existsSync(join(nextToCwd, "catalog.yaml"))) return nextToCwd;
-  return join(homedir(), ".agent-router", "prompts");
+  const personal = join(homedir(), ".agent-router", "prompts");
+  return existsSync(join(personal, "catalog.yaml")) ? personal : BUNDLED_PROMPTS_DIR;
 }
 
 function fileForPromptId(id: string, dir: string): string | undefined {
@@ -32,6 +36,10 @@ function fileForPromptId(id: string, dir: string): string | undefined {
 }
 
 export function loadCatalogPrompt(id: string, dir: string): string {
+  if (dir === BUNDLED_PROMPTS_DIR) {
+    if (!Object.hasOwn(BUNDLED_PROMPTS, id)) throw new Error(`Unknown bundled prompt id "${id}"`);
+    return BUNDLED_PROMPTS[id];
+  }
   const file = fileForPromptId(id, dir);
   if (!file || !existsSync(file)) {
     throw new Error(`Unknown prompt id "${id}" (promptsDir=${dir})`);

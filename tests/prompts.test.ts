@@ -4,15 +4,19 @@ import { join } from "node:path";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
-import { composeRoutePrompt, loadCatalogPrompt, resolvePromptsDir } from "../src/core/prompts";
+import { BUNDLED_PROMPTS_DIR, composeRoutePrompt, loadCatalogPrompt, resolvePromptsDir } from "../src/core/prompts";
 
-const siblingPrompts = join(dirname(fileURLToPath(import.meta.url)), "../../ideation-loop-system/prompts");
+const bundledPrompts = join(dirname(fileURLToPath(import.meta.url)), "../prompts");
 
 describe("prompt catalog loader", () => {
-  it("resolves the sibling ideation-loop-system prompts dir", () => {
-    const dir = resolvePromptsDir(join(siblingPrompts, "..", "..", "vscode-agent-router"));
-    expect(dir).toContain("ideation-loop-system");
-    expect(loadCatalogPrompt("chatgpt.plan", dir)).toMatch(/chatgpt\.plan/);
+  it("loads the bundled catalog without an Ideation checkout", () => {
+    expect(loadCatalogPrompt("chatgpt.plan", BUNDLED_PROMPTS_DIR)).toMatch(/chatgpt\.plan/);
+    expect(loadCatalogPrompt("chatgpt.plan", BUNDLED_PROMPTS_DIR)).toBe(loadCatalogPrompt("chatgpt.plan", bundledPrompts));
+    expect(() => loadCatalogPrompt("unknown.prompt", BUNDLED_PROMPTS_DIR)).toThrow(/Unknown bundled prompt/);
+  });
+
+  it("preserves explicitly configured catalogs", () => {
+    expect(resolvePromptsDir("/unrelated/workspace", bundledPrompts)).toBe(bundledPrompts);
   });
 
   it("composes promptId + user prompt + memoryPacket", () => {

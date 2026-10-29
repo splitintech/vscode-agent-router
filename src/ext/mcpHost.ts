@@ -22,7 +22,9 @@ export function startMcpHost(
   output: vscode.OutputChannel,
 ): vscode.Disposable {
   const mcpJs = join(context.extensionPath, "dist", "mcp.js");
-  const env = mcpEnv(context);
+  const env = Object.fromEntries(
+    Object.entries(mcpEnv(context)).filter((entry): entry is [string, string] => typeof entry[1] === "string"),
+  );
   const api = cursorMcp();
 
   if (typeof api?.registerServer === "function") {
