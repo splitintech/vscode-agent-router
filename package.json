@@ -258,7 +258,7 @@
     "@types/vscode": "^1.93.0",
     "@vscode/vsce": "3.6.0",
     "tsup": "^8.5.0",
-    "typescript": "^5.8.3",
+    "typescript": "^7.0.2",
     "vitest": "^3.2.4"
   }
 }
