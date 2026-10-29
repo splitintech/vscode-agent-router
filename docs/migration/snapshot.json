@@ -185,10 +185,10 @@
     },
     {
       "path": "src/core/jobs.ts",
-      "sha256": "f3d4ab0d974b016f78f079b83c0c3b5282ad7e89c9cfd2e736ba2a28548c0b32",
+      "sha256": "b2366b48336aeabafd5468a92475a4d919121a981f3baa127af1c037a8587a79",
       "source_sha256": "f3d4ab0d974b016f78f079b83c0c3b5282ad7e89c9cfd2e736ba2a28548c0b32",
       "mode": "100644",
-      "change": null
+      "change": "Keep newest insertion first when job timestamps tie; cover identical timestamps deterministically."
     },
     {
       "path": "src/core/launchUri.ts",
@@ -346,10 +346,10 @@
     },
     {
       "path": "tests/jobs.test.ts",
-      "sha256": "acabfa8a833471fe49041e932b84f0ce3a1d67706bd594872ff9a00b039fe436",
+      "sha256": "0a4491c82507cccd0b105003395c0c45b0a5867567440dcc6228c1f3debd22ab",
       "source_sha256": "acabfa8a833471fe49041e932b84f0ce3a1d67706bd594872ff9a00b039fe436",
       "mode": "100644",
-      "change": null
+      "change": "Keep newest insertion first when job timestamps tie; cover identical timestamps deterministically."
     },
     {
       "path": "tests/launchUri.test.ts",

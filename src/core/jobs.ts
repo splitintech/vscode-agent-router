@@ -46,7 +46,7 @@ export class JobStore {
   }
 
   list(): Job[] {
-    return [...this.jobs.values()].sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+    return [...this.jobs.values()].reverse().sort((a, b) => b.createdAt.localeCompare(a.createdAt));
   }
 
   get(id: string): Job | undefined {

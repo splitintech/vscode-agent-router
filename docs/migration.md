@@ -11,3 +11,5 @@ Run `python3 scripts/check-migration.py --snapshot` for exact migration integrit
 The old folder becomes a migration notice only after remote source and standalone checks are verified. Restore a previous consumer artifact or use the pinned hub revision for rollback. New development belongs in this repository.
 
 Agent Router bundles the 17-prompt Ideation catalog with file provenance, while explicit custom catalogs keep priority. The VSIX bundles MCP/Zod runtime dependencies because node_modules is excluded from the extension artifact. MCP registration filters undefined environment values to satisfy its existing API contract. Packed-artifact checks load the extension and library and perform an MCP handshake and prompt handoff in dry-run mode.
+
+Linux CI exposed a pre-existing job ordering race when two jobs shared a millisecond. Equal timestamps now preserve newest-insertion-first ordering, with a deterministic fixed-clock regression test.

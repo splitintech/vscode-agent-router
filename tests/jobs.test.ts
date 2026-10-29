@@ -1,9 +1,13 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { encodeClaudeHandoffUri } from "../src/adapters/claude";
 import { extractJobRef, isTerminalStatus, JobStore } from "../src/core/jobs";
 
+afterEach(() => vi.useRealTimers());
+
 describe("JobStore", () => {
   it("records a cloud launch and lists newest first", () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-10-29T00:00:00Z"));
     const store = new JobStore();
     const first = store.recordLaunch({
       peer: "claude",
